@@ -1,4 +1,4 @@
-const { default: NitroProof } = require("./components/NitroProof");
+const { default: NitroProof } = require("../components/NitroProof");
 
 const { useState } = require("react");
 

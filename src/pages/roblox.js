@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { useState } from 'react'
 import { Montserrat } from 'next/font/google'
-import RobuxPayout from './components/RobuxPayout'
+import RobuxPayout from '../components/RobuxPayout'
 
 const font = Montserrat({ subsets: ['latin'] })
 
@@ -53,19 +53,6 @@ export default function Home() {
             image: thumbnail
         })
     }
-    const todaysDate = new Date()
-
-    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", 'Nov', 'Dec']
-    const month = monthNames[todaysDate.getMonth()]
-    const day = todaysDate.getDate()
-    const year = todaysDate.getFullYear()
-    const hour = todaysDate.getHours()
-    const minute = todaysDate.getMinutes()
-    const ampm = hour >= 12 ? 'PM' : 'AM'
-    const hour12 = hour % 12 || 12
-
-    const topDate = `${month} ${day}, ${year}`
-    const bottomDate = `${hour12}:${minute} ${ampm}`
 
     return (
         <main className={"flex items-center flex-col"}>
