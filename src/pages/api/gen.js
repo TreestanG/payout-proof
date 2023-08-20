@@ -42,6 +42,6 @@ export default function handler(req, res) {
     let aiGen = result[0].candidates[0].output
     const [username, response] = aiGen.split(/,(.*)/s)
 
-    res.status(200).json({username, response})
+    res.status(200).json({ username, response })
   })
 }
