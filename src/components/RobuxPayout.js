@@ -16,7 +16,6 @@ export default function RobuxPayout({ values, index }) {
     const bottomDate = `${hour12}:${minute} ${ampm}`
 
     const color = index % 2 == 0 ? "bg-[#232426]" : "bg-[#2b2c2d]"
-    console.log(index, color)
 
     return (
         <div className={`w-[1100px] h-[90px] flex shadow-white justify-between items-center text-lg pr-4 ${color}`}>
@@ -36,7 +35,7 @@ export default function RobuxPayout({ values, index }) {
             </div>
 
             <div className="inline w-[35rem]">
-                <p><span className="font font-medium">{values.payer}</span> spent <img src="/robux.png" className=' w-6 h-6 inline'></img> {values.amount} of group funds for: one-time payout of Robux from group funds to <span className="font-medium">{values.username}</span>  ({values.amount})</p>
+                <p><span className="font font-medium">{values.payer}</span> spent <img src="/robux.png" className=' w-6 h-6 inline'></img> {values.amount} of group funds for: one-time payout of Robux from group funds to <span className="font-medium">{values.username}</span> ({values.amount})</p>
             </div>
         </div>)
 
